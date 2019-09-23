@@ -135,8 +135,8 @@
   var id = setInterval(frame, 1);
   function frame() {
       pos++; 
-      elem.style.top = Math.random($(window).height) + 'px'; 
-      elem.style.left = Math.random($(window).width)  + 'px'; 
+      elem.style.top = Math.random(0, window.innerHeight) + 'px'; 
+      elem.style.left = Math.random(0, window.innerWidth)  + 'px'; 
   }
 
 </script>
