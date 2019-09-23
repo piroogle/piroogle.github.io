@@ -9,18 +9,129 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <style>
         .rainbow {
-            background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2), color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22));
-            background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2), color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22));
-            color: transparent;
-            -webkit-background-clip: text;
-            background-clip: text;
+            /* Chrome, Safari, Opera */
+            -webkit-animation: rainbow 5s infinite;
+            /* Internet Explorer */
+            -ms-animation: rainbow 5s infinite;
+            /* Standar Syntax */
+            animation: rainbow 5s infinite;
+        }
+        /* Chrome, Safari, Opera */
+        
+        @-webkit-keyframes rainbow {
+            0% {
+                color: orange;
+            }
+            10% {
+                color: purple;
+            }
+            20% {
+                color: red;
+            }
+            30% {
+                color: CadetBlue;
+            }
+            40% {
+                color: yellow;
+            }
+            50% {
+                color: coral;
+            }
+            60% {
+                color: green;
+            }
+            70% {
+                color: cyan;
+            }
+            80% {
+                color: DeepPink;
+            }
+            90% {
+                color: DodgerBlue;
+            }
+            100% {
+                color: orange;
+            }
+        }
+        /* Internet Explorer */
+        
+        @-ms-keyframes rainbow {
+            0% {
+                color: orange;
+            }
+            10% {
+                color: purple;
+            }
+            20% {
+                color: red;
+            }
+            30% {
+                color: CadetBlue;
+            }
+            40% {
+                color: yellow;
+            }
+            50% {
+                color: coral;
+            }
+            60% {
+                color: green;
+            }
+            70% {
+                color: cyan;
+            }
+            80% {
+                color: DeepPink;
+            }
+            90% {
+                color: DodgerBlue;
+            }
+            100% {
+                color: orange;
+            }
+        }
+        /* Standar Syntax */
+        
+        @keyframes rainbow {
+            0% {
+                color: orange;
+            }
+            10% {
+                color: purple;
+            }
+            20% {
+                color: red;
+            }
+            30% {
+                color: CadetBlue;
+            }
+            40% {
+                color: yellow;
+            }
+            50% {
+                color: coral;
+            }
+            60% {
+                color: green;
+            }
+            70% {
+                color: cyan;
+            }
+            80% {
+                color: DeepPink;
+            }
+            90% {
+                color: DodgerBlue;
+            }
+            100% {
+                color: orange;
+            }
         }
     </style>
 </head>
 
 <body>
-    <!--<h1 class="text-center rainbow">Piroogle</h1>-->
-    <h1><div><span style="color:#ff0000;">P</span><span style="color:#ff2a00;">i</span><span style="color:#ff5500;">r</span><span style="color:#ff7f00;">o</span><span style="color:#ffbf00;">o</span><span style="color:#ffff00;">o</span><span style="color:#aaff00;">o</span><span style="color:#55ff00;">o</span><span style="color:#00ff00;">o</span><span style="color:#00ff80;">o</span><span style="color:#00ffff;">o</span><span style="color:#00aaff;">o</span><span style="color:#0055ff;">o</span><span style="color:#0000ff;">g</span><span style="color:#4600ff;">l</span><span style="color:#8b00ff;">e</span></div></h1>
+    <h1 class="text-center rainbow">Piroogle</h1>
     <form method="get" action="https://www.google.com/search">
         <input type="text" name="q" size="31" value="">
     </form>
