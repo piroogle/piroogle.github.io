@@ -132,12 +132,12 @@
     sleep(5000)
   var elem = document.getElementById("boris"); 
   var pos = 0;
-  var id = setInterval(frame, 1);
   function frame() {
       pos++; 
       elem.style.top = Math.random(0, window.innerHeight) + 'px'; 
       elem.style.left = Math.random(0, window.innerWidth)  + 'px'; 
   }
+  setInterval(frame(), 1000)
 
 </script>
 </head>
