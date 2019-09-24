@@ -129,7 +129,6 @@
         }
     </style>
     <script>
-        /*
     $(document).ready(function(){
   var elem = document.getElementById("boris"); 
   function frame() {
@@ -137,53 +136,17 @@
       elem.style.left = Math.random(0, window.innerWidth)  + 'px'; 
   }
   setInterval(frame(), 1000)
-  */
-        $(document).ready(function() {
-    animateDiv($('.boris'));
-
-});
-
-function makeNewPosition($container) {
-
-    // Get viewport dimensions (remove the dimension of the div)
-    var h = $container.height() - 50;
-    var w = $container.width() - 50;
-
-    var nh = Math.floor(Math.random() * h);
-    var nw = Math.floor(Math.random() * w);
-
-    return [nh, nw];
-
-}
-
-function animateDiv($target) {
-    var newq = makeNewPosition($target.parent());
-    var oldq = $target.offset();
-    var speed = calcSpeed([oldq.top, oldq.left], newq);
-
-    $target.animate({
-        top: newq[0],
-        left: newq[1]
-    }, speed, function() {
-        animateDiv($target);
-    });
-
+})
+        
+        var realConsoleLog = console.log;
+        var messagetxt = ""
+console.log = function () {
+    var message = [].join.call(arguments, " ");
+    // Display the message somewhere... (jQuery example)
+    messagetxt += "\n" + message
+    $(".output").text(messagetxt);
+    realConsoleLog.apply(console, arguments);
 };
-
-function calcSpeed(prev, next) {
-
-    var x = Math.abs(prev[1] - next[1]);
-    var y = Math.abs(prev[0] - next[0]);
-
-    var greatest = x > y ? x : y;
-
-    var speedModifier = 0.1;
-
-    var speed = Math.ceil(greatest / speedModifier);
-
-    return speed;
-
-}
 
 </script>
 </head>
@@ -194,6 +157,7 @@ function calcSpeed(prev, next) {
         <input type="text" name="q" size="31" value="" placeholder="Piroogle Query" class="form-control offset-md-3 col-md-6">
     </form>
     <img src="photo.jpeg" class="boris" id="boris">
+    <p class="output"></p>
     <footer class="page-footer footer font-small blue pt-4">
         <p class="text-center white">farmin' rice since BEFORE YOU WERE BORN. Chingwa.</p>
     </footer>
