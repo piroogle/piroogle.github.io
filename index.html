@@ -18,8 +18,10 @@
         }
         
         .boris {
-            position: fixed
-            animation: boris 5s infinite
+            position: fixed;
+            -webkit-animation: boris 5s infinite;
+            -ms-animation: boris 5s infinite;
+            animation: boris 5s infinite;
         }
         /* Chrome, Safari, Opera */
         
@@ -133,15 +135,39 @@
             }
         }
         
-        @keyframes boris {
+        @-webkit-keyframes boris {
             0% {
-                left: 0px
+                left: 0px;
             }
             50% {
-                left: 100% of viewport width
+                left: 100% of viewport width;
             }
             100% {
-                left: 0px
+                left: 0px;
+            }
+        }
+        
+        @-ms-keyframes boris {
+            0% {
+                left: 0px;
+            }
+            50% {
+                left: 100% of viewport width;
+            }
+            100% {
+                left: 0px;
+            }
+        }
+        
+        @keyframes boris {
+            0% {
+                left: 0px;
+            }
+            50% {
+                left: 100% of viewport width;
+            }
+            100% {
+                left: 0px;
             }
         }
     </style>
