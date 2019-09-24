@@ -16,6 +16,11 @@
             /* Standar Syntax */
             animation: rainbow 5s infinite;
         }
+        
+        .boris {
+            position: fixed
+            animation: boris 5s infinite
+        }
         /* Chrome, Safari, Opera */
         
         @-webkit-keyframes rainbow {
@@ -127,20 +132,19 @@
                 color: orange;
             }
         }
-    </style>
-    <script>
-    $(document).ready(function(){
-  var elem = document.getElementById("boris"); 
-  function frame() {
-      elem.style.top = Math.random(0, window.innerHeight) + 'px'; 
-      elem.style.left = Math.random(0, window.innerWidth)  + 'px'; 
-  }
-  setInterval(frame(), 1000)
-})
         
-        console.log('test')
-
-</script>
+        @keyframes boris {
+            0% {
+                left: 0%
+            }
+            50% {
+                left: 100%
+            }
+            100% {
+                left: 0%
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -153,16 +157,6 @@
     <footer class="page-footer footer font-small blue pt-4">
         <p class="text-center white">farmin' rice since BEFORE YOU WERE BORN. Chingwa.</p>
     </footer>
-    <script type="text/javascript">
-  (function() {
-    var s = document.createElement("script");
-    s.type = "text/javascript";
-    s.async = true;
-    s.src = '//api.usersnap.com/load/65c7af38-d91a-4ef9-83ea-d68a72fa8df5.js';
-    var x = document.getElementsByTagName('script')[0];
-    x.parentNode.insertBefore(s, x);
-  })();
-</script>
 </body>
 
 </html>
