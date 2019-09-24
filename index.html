@@ -137,39 +137,26 @@
             }
         }
         
-        @-webkit-keyframes boris {
-            0% {
-                left: 0px;
-            }
-            50% {
-                left: calc(100% - 200px);
-            }
-            100% {
-                left: 0px;
-            }
-        }
-        
-        @-ms-keyframes boris {
-            0% {
-                left: 0px;
-            }
-            50% {
-                left: calc(100% - 200px);
-            }
-            100% {
-                left: 0px;
-            }
-        }
-        
         @keyframes boris {
             0% {
                 left: 0px;
+                top: 0px;
+            }
+            25% {
+                left: calc(100% - 200px);
+                top: 0px;
             }
             50% {
                 left: calc(100% - 200px);
+                top: calc(100% - 200px);
+            }
+            75% {
+                left: 0px;
+                top: calc(100% - 200px);
             }
             100% {
                 left: 0px;
+                top: 0px;
             }
         }
     </style>
