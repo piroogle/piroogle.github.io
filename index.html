@@ -10,7 +10,7 @@
     <style>
         .rainbow {
             position: fixed;
-            top: 30%;
+            top: calc(50% - 100px);
             width: 100%;
             /* Chrome, Safari, Opera */
             -webkit-animation: rainbow 5s infinite;
@@ -23,11 +23,12 @@
         .input {
             position: fixed;
             top: 50%;
+            width: 50%;
         }
         
         .bottom {
             position: fixed;
-            top: 70%;
+            top: calc(50% + 100px);
             width: 100%;
         }
         
@@ -179,7 +180,7 @@
 <body>
     <h1 class="text-center rainbow">Piroogle</h1>
     <form method="get" action="https://www.google.com/search">
-        <input type="text" name="q" size="31" value="" placeholder="Piroogle Query" class="form-control offset-md-3 col-md-6 input">
+        <input type="text" name="q" size="31" value="" placeholder="Piroogle Query" class="form-control input">
     </form>
     <img src="photo.jpeg" class="boris" id="boris">
     <footer class="page-footer footer font-small blue pt-4">
