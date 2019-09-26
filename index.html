@@ -110,6 +110,22 @@
             }
         }
     </style>
+    <script>
+        $(document).ready(() => {
+            const motd = "蜜蜂如何飞？这个问题使我感到困惑"
+            
+            function getUrlParam(parameter, defaultvalue){
+    var urlparameter = defaultvalue;
+    if(window.location.href.indexOf(parameter) > -1){
+        urlparameter = getUrlVars()[parameter];
+        }
+    return urlparameter;
+}
+            var decodedParam = decodeURI(getUrlParam("text", motd))
+            
+            $('.bottom').html(decodedParam)
+        })
+    </script>
 </head>
 
 <body>
@@ -120,7 +136,7 @@
     <img src="photo.jpeg" class="boris" id="boris">
     <img src="rice.jpg" class="rice" id="rice">
     <footer class="page-footer footer font-small blue pt-4">
-        <p class="text-center bottom">蜜蜂如何飞？这个问题使我感到困惑</p>
+        <p class="text-center bottom" id="bottom"></p>
     </footer>
 </body>
 
