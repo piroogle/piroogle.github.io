@@ -116,7 +116,7 @@
             
             const txtParam = URLSearchParams.get('text')
             
-            var decodedParam = decodeURI(getUrlParam(txtParam, motd))
+            var decodedParam = decodeURI(txtParam)
             
             $('.bottom').html(decodedParam)
         })
