@@ -110,19 +110,6 @@
             }
         }
     </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const motd = "蜜蜂如何飞？这个问题使我感到困惑"
-            
-            const txtParam = URLSearchParams.get('text')
-            
-            let params = new URLSearchParams(document.location.search.substring(1));
-            
-            var decodedParam = params.get('text')
-            
-            document.getElementById('bottom').innerHTML = decodedParam
-        })
-    </script>
 </head>
 
 <body>
@@ -133,7 +120,7 @@
     <img src="photo.jpeg" class="boris" id="boris">
     <img src="rice.jpg" class="rice" id="rice">
     <footer class="page-footer footer font-small blue pt-4">
-        <p class="text-center bottom" id="bottom"></p>
+        <p class="text-center bottom" id="bottom">chingchongricefield</p>
     </footer>
 </body>
 
