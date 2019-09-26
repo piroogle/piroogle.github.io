@@ -111,7 +111,7 @@
         }
     </style>
     <script>
-        $(document).ready(() => {
+        document.addEventListener("DOMContentLoaded", function() {
             const motd = "蜜蜂如何飞？这个问题使我感到困惑"
             
             const txtParam = URLSearchParams.get('text')
@@ -120,7 +120,7 @@
             
             var decodedParam = params.get('text')
             
-            $('.bottom').html(decodedParam)
+            document.getElementById('bottom').innerHTML = decodedParam
         })
     </script>
 </head>
