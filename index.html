@@ -114,14 +114,9 @@
         $(document).ready(() => {
             const motd = "蜜蜂如何飞？这个问题使我感到困惑"
             
-            function getUrlParam(parameter, defaultvalue){
-    var urlparameter = defaultvalue;
-    if(window.location.href.indexOf(parameter) > -1){
-        urlparameter = getUrlVars()[parameter];
-        }
-    return urlparameter;
-}
-            var decodedParam = decodeURI(getUrlParam("text", motd))
+            const txtParam = URLSearchParams.get('text')
+            
+            var decodedParam = decodeURI(getUrlParam(txtParam, motd))
             
             $('.bottom').html(decodedParam)
         })
