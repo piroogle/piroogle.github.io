@@ -31,6 +31,10 @@
         -moz-user-drag: none;
         -o-user-drag: none;
         user-drag: none;
+      }
+      
+      .noselect {
+        
         -webkit-user-select: none;
         -khtml-user-select: none;
         -moz-user-select: none;
@@ -195,7 +199,7 @@
   </head>
 
   <body>
-    <h1 class="text-center rainbow">Piroogle</h1>
+    <h1 class="text-center rainbow noselect">Piroogle</h1>
     <form method="get" action="https://www.google.com/search">
       <input
         type="text"
@@ -203,15 +207,15 @@
         size="31"
         value=""
         placeholder="Piroogle Query"
-        class="form-control input"
+        class="form-control input noselect"
       />
     </form>
-    <img src="photo.jpeg" class="boris" />
-    <img src="rice.jpg" class="rice" />
-    <img src="mao.jpg" class="mao" />
-    <img src="xi.jpg" class="xi" />
-    <img src="bob.jpg" class="bob" />
-    <img src="patrick.jpg" class="patrick" />
+    <img src="photo.jpeg" class="boris noselect" />
+    <img src="rice.jpg" class="rice noselect" />
+    <img src="mao.jpg" class="mao noselect" />
+    <img src="xi.jpg" class="xi noselect" />
+    <img src="bob.jpg" class="bob noselect" />
+    <img src="patrick.jpg" class="patrick noselect" />
     <footer class="page-footer footer font-small blue pt-4">
       <p class="text-center bottom">谁将成为奶酪神的下一个牺牲品</p>
     </footer>
