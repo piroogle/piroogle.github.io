@@ -35,21 +35,21 @@
       src="https://www.googletagmanager.com/gtag/js?id=UA-149676040-1"
     ></script>
     <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-              dataLayer.push(arguments);
-            }
-            gtag("js", new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-            gtag("config", "UA-149676040-1");
+      gtag("config", "UA-149676040-1");
 
-            var url_string = "http://www.example.com/t.html?a=1&b=3&c=m2-m3-m4-m5"; //window.location.href
+      var url_string = "http://www.example.com/t.html?a=1&b=3&c=m2-m3-m4-m5"; //window.location.href
       var url = new URL(url_string);
       var text = url.searchParams.get("text");
       console.log(text);
-            document.ready(() => {
-              document.getElementByClassName('bottom').innerHTML = text;
-            })
+      document.ready(() => {
+        document.getElementByClassName("bottom").innerHTML = text;
+      });
     </script>
     <style>
       img {
