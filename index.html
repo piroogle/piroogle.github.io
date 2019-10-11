@@ -46,7 +46,7 @@
       var urlParams = new URLSearchParams(window.location.search);
 
       console.log(urlParams.get("text"));
-      document.getElementByClassName("bottom").innerHTML = urlParams.get(
+      document.getElementById("bottom").innerHTML = urlParams.get(
         "text"
       );
     </script>
