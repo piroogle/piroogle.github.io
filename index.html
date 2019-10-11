@@ -43,13 +43,10 @@
 
       gtag("config", "UA-149676040-1");
 
-      var url_string = window.location.href;
-      var url = new URL(url_string);
-      var text = url.searchParams.get("text");
-      console.log(text);
-      document.ready(() => {
-        document.getElementByClassName("bottom").innerHTML = text;
-      });
+      var urlParams = new URLSearchParams(window.location.search);
+      
+      console.log(urlParams.get('text'));
+      document.getElementByClassName('bottom').innerHTML = urlParams.get('text')
     </script>
     <style>
       img {
