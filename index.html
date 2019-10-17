@@ -49,9 +49,9 @@
         {}
       );
 
-          console.log(urlParams(window.location)[1]);
+          console.log(urlParams(window.location).text);
           document.ready(() => {
-            document.getElementByClassName("bottom").innerHTML = urlParams(window.location)[1]
+            document.getElementByClassName("bottom").innerHTML = urlParams(window.location).text
           });
     </script>
     <style>
