@@ -43,13 +43,15 @@
 
       gtag("config", "UA-149676040-1");
 
-      var urlParams = new URLSearchParams(window.location.search);
+      var urlParams = const getURLParameters = url =>
+  (url.match(/([^?=&]+)(=([^&]*))/g) || []).reduce(
+    (a, v) => ((a[v.slice(0, v.indexOf('='))] = v.slice(v.indexOf('=') + 1)), a),
+    {}
+  );
 
-      console.log(urlParams.get("text"));
+      console.log(urlParams.text);
       document.ready(() => {
-        document.getElementByClassName("bottom").innerHTML = urlParams.get(
-          "text"
-        );
+        document.getElementByClassName("bottom").innerHTML = urlParams.text
       });
     </script>
     <style>
