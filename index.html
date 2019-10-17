@@ -49,9 +49,9 @@
         {}
       );
 
-          console.log(urlParams.text);
+          console.log(urlParams(location.search).text);
           document.ready(() => {
-            document.getElementByClassName("bottom").innerHTML = urlParams.text
+            document.getElementByClassName("bottom").innerHTML = urlParams(location.search).text
           });
     </script>
     <style>
