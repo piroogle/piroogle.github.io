@@ -35,24 +35,24 @@
       src="https://www.googletagmanager.com/gtag/js?id=UA-149676040-1"
     ></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
 
-      gtag("config", "UA-149676040-1");
+          gtag("config", "UA-149676040-1");
 
-      var urlParams = const getURLParameters = url =>
-  (url.match(/([^?=&]+)(=([^&]*))/g) || []).reduce(
-    (a, v) => ((a[v.slice(0, v.indexOf('='))] = v.slice(v.indexOf('=') + 1)), a),
-    {}
-  );
+          var urlParams = const getURLParameters = url =>
+      (url.match(/([^?=&]+)(=([^&]*))/g) || []).reduce(
+        (a, v) => ((a[v.slice(0, v.indexOf('='))] = v.slice(v.indexOf('=') + 1)), a),
+        {}
+      );
 
-      console.log(urlParams.text);
-      document.ready(() => {
-        document.getElementByClassName("bottom").innerHTML = urlParams.text
-      });
+          console.log(urlParams.text);
+          document.ready(() => {
+            document.getElementByClassName("bottom").innerHTML = urlParams.text
+          });
     </script>
     <style>
       img {
