@@ -59,8 +59,8 @@
         );
 
       console.log(getURLParameters(window.location).text);
-      document.ready(() => {
-        document.getElementByClassName("bottom").innerHTML = getType(
+      $(document).ready(() => {
+        document.getElementById("bottom").innerHTML = getType(
           getURLParameters(window.location)
         );
       });
@@ -260,7 +260,7 @@
     <img src="bob.jpg" class="bob noselect" />
     <img src="patrick.jpg" class="patrick noselect" />
     <footer class="page-footer footer font-small blue pt-4">
-      <p class="text-center bottom">
+      <p class="text-center bottom" id="bottom">
         piroogle是最好的搜索引擎
       </p>
     </footer>
