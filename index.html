@@ -44,8 +44,12 @@
       gtag("config", "UA-149676040-1");
 
       const getType = v =>
-  v === undefined ? 'undefined' : v === null ? 'null' : v.constructor.name.toLowerCase();
-      
+        v === undefined
+          ? "undefined"
+          : v === null
+          ? "null"
+          : v.constructor.name.toLowerCase();
+
       const getURLParameters = url =>
         (url.match(/([^?=&]+)(=([^&]*))/g) || []).reduce(
           (a, v) => (
@@ -56,7 +60,9 @@
 
       console.log(getURLParameters(window.location).text);
       document.ready(() => {
-        document.getElementByClassName("bottom").innerHTML = getType(getURLParameters(window.location))
+        document.getElementByClassName("bottom").innerHTML = getType(
+          getURLParameters(window.location)
+        );
       });
     </script>
     <style>
