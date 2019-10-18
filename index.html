@@ -42,15 +42,24 @@
       gtag("js", new Date());
 
       gtag("config", "UA-149676040-1");
+    </script>
+    <script>
+      const getType = v =>
+        v === undefined
+          ? "undefined"
+          : v === null
+          ? "null"
+          : v.constructor.name.toLowerCase();
 
-      var urlParams = new URLSearchParams(window.location.search);
-
-      console.log(urlParams.get("text"));
-      document.ready(() => {
-        document.getElementByClassName("bottom").innerHTML = urlParams.get(
-          "text"
+      const getURLParameters = url =>
+        (url.match(/([^?=&]+)(=([^&]*))/g) || []).reduce(
+          (a, v) => (
+            (a[v.slice(0, v.indexOf("="))] = v.slice(v.indexOf("=") + 1)), a
+          ),
+          {}
         );
-      });
+
+      document.getElementById("bottom").innerHTML = "hi";
     </script>
     <style>
       img {
@@ -247,8 +256,8 @@
     <img src="bob.jpg" class="bob noselect" />
     <img src="patrick.jpg" class="patrick noselect" />
     <footer class="page-footer footer font-small blue pt-4">
-      <p class="text-center bottom">
-        哦，我的上帝皮鲁姆真烦人。
+      <p class="text-center bottom" id="bottom">
+        piroogle是最好的搜索引擎
       </p>
     </footer>
   </body>
