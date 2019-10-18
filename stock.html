@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Piroogle Stocks</title>
+    <!--
     <style>
       .tradingview-widget-container {
         position: fixed;
@@ -9,6 +10,7 @@
         width: 100vw;
       }
     </style>
+    -->
   </head>
   <body>
     <!-- TradingView Widget BEGIN -->
@@ -29,7 +31,8 @@
       ></script>
       <script type="text/javascript">
         new TradingView.widget({
-          autosize: true,
+          height: 100%,
+          width: 100%,
           symbol: "NASDAQ:AAPL",
           interval: "D",
           timezone: "Etc/UTC",
