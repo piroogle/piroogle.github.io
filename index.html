@@ -59,9 +59,9 @@
           {}
         );
 
-      console.log(getURLParameters);
+      console.log(getURLParameters(location.search));
 
-      $(".bottom").html(getURLParameters(window.location));
+      $(".bottom").html(getURLParameters(location.search));
     </script>
     <style>
       img {
