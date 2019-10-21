@@ -61,7 +61,7 @@
 
       console.log(getURLParameters(location.search).text);
 
-      window.onload = () => {\
+      window.onload = () => {
       if (getURLParameters(location.search).text != undefined) {
         document.getElementById("bottom").innerHTML = decodeURI(
           getURLParameters(location.search).text
