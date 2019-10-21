@@ -61,11 +61,19 @@
 
       console.log(getURLParameters(location.search).text);
 
+<<<<<<< HEAD
 window.onload = () => {
       document.getElementById("bottom").innerHTML = getURLParameters(
         location.search
       ).decodeURI(text);
 }
+=======
+      window.onload = () => {
+        document.getElementById("bottom").innerHTML = getURLParameters(
+          location.search
+        ).text;
+      };
+>>>>>>> 04eb771e757cc95480b5aa1e47c25bb9f3b5ac4f
     </script>
     <style>
       img {
