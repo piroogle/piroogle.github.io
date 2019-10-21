@@ -44,29 +44,28 @@
       gtag("config", "UA-149676040-1");
     </script>
     <script>
-            const getType = v =>
-              v === undefined
-                ? "undefined"
-                : v === null
-                ? "null"
-                : v.constructor.name.toLowerCase();
+      const getType = v =>
+        v === undefined
+          ? "undefined"
+          : v === null
+          ? "null"
+          : v.constructor.name.toLowerCase();
 
-            const getURLParameters = url =>
-              (url.match(/([^?=&]+)(=([^&]*))/g) || []).reduce(
-                (a, v) => (
-                  (a[v.slice(0, v.indexOf("="))] = v.slice(v.indexOf("=") + 1)), a
-                ),
-                {}
-              );
+      const getURLParameters = url =>
+        (url.match(/([^?=&]+)(=([^&]*))/g) || []).reduce(
+          (a, v) => (
+            (a[v.slice(0, v.indexOf("="))] = v.slice(v.indexOf("=") + 1)), a
+          ),
+          {}
+        );
 
-            console.log(getURLParameters(location.search).text);
+      console.log(getURLParameters(location.search).text);
 
-window.onload = () => {
-      document.getElementById("bottom").innerHTML = decodeURI(getURLParameters(
-        location.search
-      ).text);
-}
-
+      window.onload = () => {
+        document.getElementById("bottom").innerHTML = decodeURI(
+          getURLParameters(location.search).text
+        );
+      };
     </script>
     <style>
       img {
