@@ -64,7 +64,7 @@
 window.onload = () => {
       document.getElementById("bottom").innerHTML = getURLParameters(
         location.search
-      ).text;
+      ).decodeURI(text);
 }
     </script>
     <style>
