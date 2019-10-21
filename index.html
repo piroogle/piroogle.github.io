@@ -61,9 +61,11 @@
 
       console.log(getURLParameters(location.search).text);
 
+window.onload = () => {
       document.getElementById("bottom").innerHTML = getURLParameters(
         location.search
       ).text;
+}
     </script>
     <style>
       img {
