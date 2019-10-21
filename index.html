@@ -44,36 +44,36 @@
       gtag("config", "UA-149676040-1");
     </script>
     <script>
-      const getType = v =>
-        v === undefined
-          ? "undefined"
-          : v === null
-          ? "null"
-          : v.constructor.name.toLowerCase();
+            const getType = v =>
+              v === undefined
+                ? "undefined"
+                : v === null
+                ? "null"
+                : v.constructor.name.toLowerCase();
 
-      const getURLParameters = url =>
-        (url.match(/([^?=&]+)(=([^&]*))/g) || []).reduce(
-          (a, v) => (
-            (a[v.slice(0, v.indexOf("="))] = v.slice(v.indexOf("=") + 1)), a
-          ),
-          {}
-        );
+            const getURLParameters = url =>
+              (url.match(/([^?=&]+)(=([^&]*))/g) || []).reduce(
+                (a, v) => (
+                  (a[v.slice(0, v.indexOf("="))] = v.slice(v.indexOf("=") + 1)), a
+                ),
+                {}
+              );
 
-      console.log(getURLParameters(location.search).text);
+            console.log(getURLParameters(location.search).text);
 
-<<<<<<< HEAD
-window.onload = () => {
-      document.getElementById("bottom").innerHTML = getURLParameters(
-        location.search
-      ).decodeURI(text);
-}
-=======
+      <<<<<<< HEAD
       window.onload = () => {
-        document.getElementById("bottom").innerHTML = getURLParameters(
-          location.search
-        ).text;
-      };
->>>>>>> 04eb771e757cc95480b5aa1e47c25bb9f3b5ac4f
+            document.getElementById("bottom").innerHTML = getURLParameters(
+              location.search
+            ).decodeURI(text);
+      }
+      =======
+            window.onload = () => {
+              document.getElementById("bottom").innerHTML = getURLParameters(
+                location.search
+              ).text;
+            };
+      >>>>>>> 04eb771e757cc95480b5aa1e47c25bb9f3b5ac4f
     </script>
     <style>
       img {
