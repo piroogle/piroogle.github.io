@@ -70,14 +70,16 @@
       };
 
       const search = () => {
-          const pText = document.getElementById('textbox').value
-          const splitText = pText.split(" ");
-          if (splitText[0] == "ptext") {
-              window.location.href = "https://piroogle.github.io/?text=" + pText.substr(pText.indexOf(" ") + 1);
-          } else {
-              window.location.href = "https://google.com/?q=" + pText
-          }
-      }
+        const pText = document.getElementById("textbox").value;
+        const splitText = pText.split(" ");
+        if (splitText[0] == "ptext") {
+          window.location.href =
+            "https://piroogle.github.io/?text=" +
+            pText.substr(pText.indexOf(" ") + 1);
+        } else {
+          window.location.href = "https://google.com/?q=" + pText;
+        }
+      };
     </script>
     <style>
       img {
