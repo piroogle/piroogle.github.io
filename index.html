@@ -68,6 +68,16 @@
           );
         }
       };
+
+      const search = () => {
+          const pText = document.getElementById('textbox').value
+          const splitText = pText.split(" ");
+          if (splitText[0] == "ptext") {
+              window.location.href = "https://piroogle.github.io/?text=" + pText.substr(pText.indexOf(" ") + 1);
+          } else {
+              window.location.href = "https://google.com/?q=" + pText
+          }
+      }
     </script>
     <style>
       img {
@@ -247,7 +257,7 @@
 
   <body>
     <h1 class="text-center rainbow noselect">Piroogle</h1>
-    <form method="get" action="https://www.google.com/search">
+    <form method="get" action="search()">
       <input
         type="text"
         name="q"
@@ -255,6 +265,7 @@
         value=""
         placeholder="Piroogle Query"
         class="form-control input"
+        id="textbox"
       />
     </form>
     <img src="photo.jpeg" class="boris noselect" />
