@@ -59,7 +59,27 @@
           {}
         );
 
-      document.getElementById("bottom").innerHTML = "hi";
+      console.log(getURLParameters(location.search).text);
+
+      window.onload = () => {
+        if (getURLParameters(location.search).text != undefined) {
+          document.getElementById("bottom").innerHTML = decodeURI(
+            getURLParameters(location.search).text
+          );
+        }
+      };
+
+      const search = () => {
+        const pText = document.getElementById("textbox").value;
+        const splitText = pText.split(" ");
+        if (splitText[0] == "ptext") {
+          window.location.href =
+            "https://piroogle.github.io/?text=" +
+            pText.substr(pText.indexOf(" ") + 1);
+        } else {
+          window.location.href = "https://google.com/search?q=" + pText;
+        }
+      };
     </script>
     <style>
       img {
@@ -239,7 +259,7 @@
 
   <body>
     <h1 class="text-center rainbow noselect">Piroogle</h1>
-    <form method="get" action="https://www.google.com/search">
+    <form onsubmit="search()">
       <input
         type="text"
         name="q"
@@ -247,6 +267,7 @@
         value=""
         placeholder="Piroogle Query"
         class="form-control input"
+        id="textbox"
       />
     </form>
     <img src="photo.jpeg" class="boris noselect" />
@@ -257,7 +278,7 @@
     <img src="patrick.jpg" class="patrick noselect" />
     <footer class="page-footer footer font-small blue pt-4">
       <p class="text-center bottom" id="bottom">
-        我们应该启动PiroogleCast吗？
+      我们应该启动PiroogleCast吗？
       </p>
     </footer>
   </body>
