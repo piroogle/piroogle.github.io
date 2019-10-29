@@ -34,7 +34,7 @@ img {
   z-index: -2;
 }
 
-.bob {
+.boris {
   position: fixed;
   left: 0;
   top: 50%;
@@ -44,7 +44,7 @@ img {
   z-index: -3;
 }
 
-.patrick {
+.rice {
   position: fixed;
   left: 50%;
   top: 50%;
@@ -88,6 +88,7 @@ img {
   padding-right: 12%;
 }
 
+/*
 .boris {
   width: 10%;
   height: width;
@@ -104,6 +105,7 @@ img {
   animation-delay: -2.5s;
   z-index: 5;
 }
+*/
 
 @keyframes rainbow {
   0% {
