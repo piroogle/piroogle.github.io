@@ -29,6 +29,10 @@
       content="5hDr4ZuCu97Y118DZpFi2LA4Kmu5XKZDQgNmoBB9rkE"
     />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
       async
@@ -44,8 +48,216 @@
       gtag("config", "UA-149676040-1");
     </script>
     <script src="bottom.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    
+    <style>
+      img {
+        -webkit-user-drag: none;
+        -khtml-user-drag: none;
+        -moz-user-drag: none;
+        -o-user-drag: none;
+        user-drag: none;
+      }
+
+      .noselect {
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+      }
+
+      .mao {
+        position: fixed;
+        left: 0;
+        top: 0;
+        filter: contrast(30%) brightness(170%);
+        width: 50vw;
+        height: 50vh;
+        z-index: -1;
+      }
+
+      .xi {
+        position: fixed;
+        left: 50%;
+        top: 0;
+        filter: saturate(0%) contrast(30%) brightness(170%);
+        width: 50vw;
+        height: 50vh;
+        z-index: -2;
+      }
+
+      .boris {
+        position: fixed;
+        left: 0;
+        top: 50%;
+        filter: saturate(0%) contrast(30%) brightness(170%);
+        width: 50vw;
+        height: 50vh;
+        z-index: -3;
+      }
+
+      .rice {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        filter: saturate(0%) contrast(30%) brightness(170%);
+        width: 50vw;
+        height: 50vh;
+        z-index: -4;
+      }
+
+      .rainbow {
+        position: fixed;
+        top: calc(40% - 8vh);
+        width: 100%;
+        height: 16vh;
+        animation: rainbow 5s linear infinite;
+        font-size: 10vh;
+        z-index: 1;
+        font-family: "Comic Sans MS", "Comic Sans", "ChalkboardSE-Regular",
+          cursive;
+      }
+
+      .input {
+        position: fixed;
+        top: calc(50% - 4vh);
+        left: 25%;
+        width: 50%;
+        height: 8vh;
+        z-index: 2;
+        border-radius: 4vh;
+        font-size: 3vh;
+      }
+
+      .bottom {
+        position: fixed;
+        top: calc(60% - 4vh);
+        width: 100%;
+        height: 8vh;
+        font-size: 5vh;
+        z-index: 3;
+
+        padding-left: 12%;
+        padding-right: 12%;
+      }
+
+      /*
+.boris {
+  width: 10%;
+  height: width;
+  position: fixed;
+  animation: boris 5s linear infinite;
+  z-index: 4;
+}
+.rice {
+  width: 10%;
+  height: width;
+  position: fixed;
+  animation: boris 5s linear infinite;
+  animation-delay: -2.5s;
+  z-index: 5;
+}
+*/
+
+      @keyframes rainbow {
+        0% {
+          color: #ff0000;
+        }
+        8.3% {
+          color: #ff7f00;
+        }
+        16.7% {
+          color: #ffff00;
+        }
+        24.9% {
+          color: #7fff00;
+        }
+        33.2% {
+          color: #00ff00;
+        }
+        41.5% {
+          color: #00fff7;
+        }
+        49.8% {
+          color: #00ffff;
+        }
+        58.1% {
+          color: #00f7ff;
+        }
+        66.4% {
+          color: #0000ff;
+        }
+        74.7% {
+          color: #f700ff;
+        }
+        83% {
+          color: #ff00ff;
+        }
+        91.3% {
+          color: #ff00f7;
+        }
+        100% {
+          color: #ff0000;
+        }
+      }
+
+      @keyframes boris {
+        0% {
+          left: 0px;
+          top: 0px;
+        }
+        25% {
+          left: 90%;
+          top: 0px;
+        }
+        50% {
+          left: 90%;
+          top: calc(100% - 10vw);
+        }
+        75% {
+          left: 0px;
+          top: calc(100% - 10vw);
+        }
+        100% {
+          left: 0px;
+          top: 0px;
+        }
+      }
+      /* Style all font awesome icons */
+      .fa {
+        position: fixed;
+        padding: 20px;
+        font-size: 30px;
+        width: 10vh;
+        height: 10%;
+        text-align: center;
+        text-decoration: none;
+      }
+
+      /* Add a hover effect if you want */
+      .fa:hover {
+        opacity: 0.7;
+      }
+
+      /* Set a specific color for each brand */
+
+      /* Facebook */
+      .fa-comments {
+        background: #7289da;
+        color: white;
+        position: fixed;
+        left: calc(50% - 10vh);
+        top: 90%;
+      }
+
+      /* Twitter */
+      .fa-instagram {
+        background: #e1306c;
+        color: white;
+        position: fixed;
+        left: 50%;
+        top: 90%;
+      }
+    </style>
   </head>
 
   <body>
@@ -65,12 +277,20 @@
     <img src="rice.jpg" class="rice noselect" />
     <img src="mao.jpg" class="mao noselect" />
     <img src="xi.jpg" class="xi noselect" />
-    <img src="bob.jpg" class="bob noselect" />
-    <img src="patrick.jpg" class="patrick noselect" />
     <footer class="page-footer footer font-small blue pt-4">
       <p class="text-center bottom" id="bottom">
         Piroogle重新设计可能很快或可能不会很快
       </p>
     </footer>
+    <a
+      href="https://discord.gg/RqZzbRj"
+      target="_blank"
+      class="fa fa-comments"
+    ></a>
+    <a
+      href="https://instagram.com/piroogle"
+      target="_blank"
+      class="fa fa-instagram"
+    ></a>
   </body>
 </html>
