@@ -53,9 +53,7 @@
       $(document).ready(() => {
         document.getElementById("textbox").focus();
         document.getElementById("textbox").select();
-        var imageElement = document.querySelector(".rice");
-        var chromata = new Chromata(imageElement);
-        chromata.start();
+        
       });
     </script>
     <style>
@@ -112,18 +110,8 @@
         filter: saturate(0%) contrast(30%) brightness(170%);
         width: 50vw;
         height: 50vh;
-        z-index: -4;
-      }
-
-      .chromata {
-        position: fixed;
-        left: 50%;
-        top: 50%;
-        filter: saturate(0%) contrast(30%) brightness(170%);
-        width: 50vw;
-        height: 50vh;
-        z-index: -4;
-      }
+        z-index: -4
+}
 
       .rainbow {
         position: fixed;
