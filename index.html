@@ -2,29 +2,6 @@
 <html>
   <head>
     <title>Piroogle Search</title>
-    <script>
-      const discord = (json) => {
-        function sendMessage() {
-          var request = new XMLHttpRequest();
-          request.open(
-            "POST",
-            "https://discordapp.com/api/webhooks/714229769863954482/MbPtKeS0JPe0iE_I-oOY5cKWzvz9Vc3DYySfDNDI0s0B_Gb51qYVYLrI4nahUySj8MR9"
-          );
-          request.setRequestHeader("Content-type", "application/json");
-          var params = {
-            username: "My Webhook Name",
-            avatar_url: "",
-            content: json,
-          };
-          request.send(JSON.stringify(params));
-          // replace the url in the "open" method with yours
-        }
-      };
-    </script>
-    <script
-      type="text/javascript"
-      src="https://json.geoiplookup.io/api?callback=discord"
-    ></script>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
